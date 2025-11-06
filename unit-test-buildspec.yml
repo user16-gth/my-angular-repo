@@ -10,8 +10,7 @@ phases:
       - npm install
   build:
     commands:
-      - ng build -c production
-      - echo "Build completed."
+      - ng test --no-watch --no-progress --browsers=ChromHeadlessCI
     finally:
       - echo This is the finally block execution!
 artifacts:
